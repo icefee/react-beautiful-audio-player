@@ -9,7 +9,7 @@ const TestAudioPlayer = () => {
 
     const getTestLrc = async () => {
 
-        const text = await fetch('/demo/test/test-lrc.lrc').then(
+        const text = await fetch('/docs/test/test-lrc.lrc').then(
             response => response.text()
         )
         setLrc(text)
@@ -32,8 +32,8 @@ const TestAudioPlayer = () => {
                 music={{
                     name: 'Dad n Me',
                     artist: 'Tom Fulp',
-                    url: '/demo/test/Tom Fulp-Dad n Me.mp3',
-                    poster: '/demo/test/109951162995726065.jpg',
+                    url: '/docs/test/Tom Fulp-Dad n Me.mp3',
+                    poster: '/docs/test/109951162995726065.jpg',
                     lrc
                 }}
             />
