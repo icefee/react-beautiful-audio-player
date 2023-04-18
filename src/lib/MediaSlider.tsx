@@ -2,7 +2,7 @@ import React, { useState, useRef, useMemo } from 'react';
 import Slider, { SliderProps } from '@mui/material/Slider';
 import { SxProps, Theme } from '@mui/material/styles';
 import Tooltip from '@mui/material/Tooltip';
-import { Instance } from '@popperjs/core';
+import { Instance } from '@popperjs/core/lib/types';
 
 interface MediaSliderProps extends Omit<SliderProps, 'onMouseMove'> {
     buffered: number;
@@ -54,9 +54,6 @@ function MediaSlider({ buffered, components, sx, showTooltip = false, tooltipFor
                     opacity: .5,
                     transition: (theme) => theme.transitions.create('width')
                 }
-            },
-            '& .MuiSlider-track': {
-                backgroundImage: 'linear-gradient(90deg, var(--linear-gradient), currentColor)'
             }
         }),
         [buffered, sx]
