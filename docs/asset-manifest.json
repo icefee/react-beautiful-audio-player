@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/react-beautiful-audio-player/static/js/main.192b0723.js",
+    "main.js": "/react-beautiful-audio-player/static/js/main.782733cf.js",
     "index.html": "/react-beautiful-audio-player/index.html",
-    "main.192b0723.js.map": "/react-beautiful-audio-player/static/js/main.192b0723.js.map"
+    "main.782733cf.js.map": "/react-beautiful-audio-player/static/js/main.782733cf.js.map"
   },
   "entrypoints": [
-    "static/js/main.192b0723.js"
+    "static/js/main.782733cf.js"
   ]
 }
