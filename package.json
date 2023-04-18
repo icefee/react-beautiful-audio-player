@@ -38,7 +38,7 @@
     "tslib": "^2.0.0",
     "typescript": "^4.7.4"
   },
-  "homepage": "docs",
+  "homepage": "react-beautiful-audio-player",
   "browserslist": {
     "production": [
       ">0.2%",
