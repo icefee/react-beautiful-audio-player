@@ -59,12 +59,12 @@ function MusicPlayer({ music, playing, repeat = false, onPlayStateChange, onPlay
         return () => {
             if (audioRef.current) {
                 audioRef.current.currentTime = 0;
+                setAudioReady(false);
                 setCurrentTime(0);
                 seekingRef.current = false;
-                hasError.current = false;
             }
         }
-    }, [music?.url])
+    }, [music.url])
 
     const togglePlay = async (play: boolean) => {
         try {
@@ -116,6 +116,20 @@ function MusicPlayer({ music, playing, repeat = false, onPlayStateChange, onPlay
             onPlayStateChange(false)
             setLoading(false)
             console.warn('auto play failed because of browser security policy.')
+        }
+    }
+
+    const updateBufferEnd = () => {
+        if (audioReady) {
+            const buffered = audioRef.current!.buffered;
+            let bufferedEnd: number;
+            try {
+                bufferedEnd = buffered.end(buffered.length - 1);
+            }
+            catch (err) {
+                bufferedEnd = 0;
+            }
+            setBuffered(bufferedEnd / duration!)
         }
     }
 
@@ -382,23 +396,10 @@ function MusicPlayer({ music, playing, repeat = false, onPlayStateChange, onPlay
                             if (!seekingRef.current) {
                                 setCurrentTime(audioRef.current!.currentTime)
                             }
+                            updateBufferEnd()
                         }
                     }
-                    onProgress={
-                        () => {
-                            if (audioReady) {
-                                const buffered = audioRef.current!.buffered;
-                                let bufferedEnd: number;
-                                try {
-                                    bufferedEnd = buffered.end(buffered.length - 1);
-                                }
-                                catch (err) {
-                                    bufferedEnd = 0;
-                                }
-                                setBuffered(bufferedEnd / duration!)
-                            }
-                        }
-                    }
+                    onProgress={updateBufferEnd}
                     onSeeked={
                         () => {
                             seekingRef.current = false

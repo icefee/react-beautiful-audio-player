@@ -34,6 +34,7 @@ function MusicPoster({ spinning = false, src, alt }: MusicPosterProps) {
         }
         else {
             defaultPosterUrl.current = URL.createObjectURL(defaultPoster);
+            console.log(defaultPosterUrl.current)
             setPoster(defaultPosterUrl.current)
         }
         return () => {
@@ -62,23 +63,24 @@ function MusicPoster({ spinning = false, src, alt }: MusicPosterProps) {
                 `
                 }
             />
-            <Avatar
-                alt={alt}
-                src={poster!}
-                sx={{
-                    width: '100%',
-                    height: '100%',
-                    opacity: poster ? 1 : 0,
-                    animationName: 'rotate',
-                    animationIterationCount: 'infinite',
-                    animationDuration: '12s',
-                    animationTimingFunction: 'linear',
-                    animationPlayState: spinning ? 'running' : 'paused',
-                    transition: (theme) => theme.transitions.create('opacity')
-                }}
-            />
             {
-                poster === null && (
+                poster ? (
+                    <Avatar
+                        alt={alt}
+                        src={poster}
+                        sx={{
+                            width: '100%',
+                            height: '100%',
+                            opacity: poster ? 1 : 0,
+                            animationName: 'rotate',
+                            animationIterationCount: 'infinite',
+                            animationDuration: '12s',
+                            animationTimingFunction: 'linear',
+                            animationPlayState: spinning ? 'running' : 'paused',
+                            transition: (theme) => theme.transitions.create('opacity')
+                        }}
+                    />
+                ) : (
                     <Skeleton
                         variant="circular"
                         sx={{

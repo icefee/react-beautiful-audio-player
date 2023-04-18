@@ -29,7 +29,7 @@ function InlineLrc({ lrc: lrcText, currentTime }: InlineLrcProps) {
         setLrc(
             parseLrc(lrcText)
         )
-    }, [lrc])
+    }, [lrcText])
 
     const lrcLine = useMemo(() => {
         const playedLines = lrc.filter(

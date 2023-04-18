@@ -14,6 +14,7 @@
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
+    "build:demo": "react-scripts build",
     "build": "rollup -c"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.12",
+    "react-beautiful-audio": "../react-beautiful-audio",
     "react-use": "^17.4.0"
   },
   "devDependencies": {
@@ -37,6 +39,7 @@
     "tslib": "^2.0.0",
     "typescript": "^4.7.4"
   },
+  "homepage": "demo",
   "browserslist": {
     "production": [
       ">0.2%",

@@ -23,7 +23,7 @@ const generateConfig = (entry) => ({
         [entry]: entries[entry]
     },
     output: {
-        dir: 'build',
+        dir: 'dist',
         format: 'es'
     },
     plugins: [
