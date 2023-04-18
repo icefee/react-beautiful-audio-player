@@ -18,7 +18,7 @@ const TestAudioPlayer = () => {
   const [lrc, setLrc] = useState("");
 
   const getTestLrc = async () => {
-    const text = await fetch("/docs/test/test-lrc.lrc").then(
+    const text = await fetch("/react-beautiful-audio-player/test/test-lrc.lrc").then(
       (response) => response.text(),
     );
     setLrc(text);
@@ -43,8 +43,8 @@ const TestAudioPlayer = () => {
         music={{
           name: "Dad n Me",
           artist: "Tom Fulp",
-          url: "/docs/test/Tom Fulp-Dad n Me.mp3",
-          poster: "/docs/test/109951162995726065.jpg",
+          url: "/react-beautiful-audio-player/test/Tom Fulp-Dad n Me.mp3",
+          poster: "/react-beautiful-audio-player/test/109951162995726065.jpg",
           lrc,
         }}
       />

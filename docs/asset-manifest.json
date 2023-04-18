@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/docs/static/js/main.ce40e9d6.js",
-    "index.html": "/docs/index.html",
-    "main.ce40e9d6.js.map": "/docs/static/js/main.ce40e9d6.js.map"
+    "main.js": "/react-beautiful-audio-player/static/js/main.ce40e9d6.js",
+    "index.html": "/react-beautiful-audio-player/index.html",
+    "main.ce40e9d6.js.map": "/react-beautiful-audio-player/static/js/main.ce40e9d6.js.map"
   },
   "entrypoints": [
     "static/js/main.ce40e9d6.js"
