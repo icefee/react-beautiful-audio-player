@@ -8,14 +8,14 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 
 const entries = {
-    'index': './src/lib/index.ts',
-    'AudioVisual': './src/lib/audiovisual.tsx',
-    'InlineLrc': './src/lib/InlineLrc.tsx',
-    'ScrollingLrc': './src/lib/ScrollingLrc.tsx',
-    'Loading': './src/lib/Loading.tsx',
-    'MediaSlider': './src/lib/MediaSlider.tsx',
-    'PlayOrPauseButton': './src/lib/PlayOrPauseButton.tsx',
-    'Poster': './src/lib/Poster.tsx',
+    'index': 'src/lib/index.ts',
+    'AudioVisual': 'src/lib/audiovisual.tsx',
+    'InlineLrc': 'src/lib/InlineLrc.tsx',
+    'ScrollingLrc': 'src/lib/ScrollingLrc.tsx',
+    'Loading': 'src/lib/Loading.tsx',
+    'MediaSlider': 'src/lib/MediaSlider.tsx',
+    'PlayOrPauseButton': 'src/lib/PlayOrPauseButton.tsx',
+    'Poster': 'src/lib/Poster.tsx',
 };
 
 const generateConfig = (entry) => ({
